@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Personnel {
+public final class Personnel implements Groupe {
 
     private final String nom;
     private final String prenom;
@@ -49,7 +49,28 @@ public final class Personnel {
         this.numerotel = build.numerotel;
     }
 
+    @Override
+    public void print(){
+        System.out.println(this.nom + " " + this.prenom + " " + this.fonction);
+    }
 
+    public String getFonction() {
+        return fonction;
+    }
 
+    public String getNom() {
+        return nom;
+    }
 
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public LocalDate getNaissance() {
+        return naissance;
+    }
+
+    public List<String> getNumerotel() {
+        return numerotel;
+    }
 }
